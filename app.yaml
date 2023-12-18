@@ -1,0 +1,7 @@
+runtime: java11
+instance_class: F2
+
+handlers:
+  - url: /.*
+    script: this field is required, but ignored
+web: java -Dserver.port=$PORT $JAVA_OPTS -jar target/your-application.jar

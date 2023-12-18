@@ -1,0 +1,27 @@
+server:
+  port: 8097
+  servlet:
+    context-path: /
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/mood_tracker_db
+    username: postgres
+    password: 123456
+    driver-class-name: org.postgresql.Driver
+    hikari:
+      maximum-pool-size: 10
+
+jpa:
+  database-platform: org.hibernate.dialect.PostgreSQLDialect
+  hibernate:
+    ddl-auto: update
+  show-sql: true
+
+# Flyway settings
+flyway:
+  baseline-on-migrate: true
+  locations: classpath:db/migration
+
+jwt:
+  secret: cam1hy2d32sxm2t3a
+  expiration: 86400000
